@@ -1,0 +1,43 @@
+﻿namespace GarrysModLuaShared
+{
+    enum Type
+    {
+        Invalid = -1,
+        Nil,
+        Bool,
+        LightUserData,
+        Number,
+        String,
+        Table,
+        Function,
+        UserData,
+        Thread,
+        Entity,
+        Vector,
+        Angle,
+        PhysObj,
+        Save,
+        Restore,
+        DamageInfo,
+        EffectData,
+        MoveData,
+        RecipientFilter,
+        UserCmd,
+        ScriptedVehicle,
+        Material,
+        Panel,
+        Particle,
+        ParticleEmitter,
+        Texture,
+        UserMsg,
+        ConVar,
+        Mesh,
+        Matrix,
+        Sound,
+        PixelVisHandle,
+        DLight,
+        Video,
+        File,
+        Count
+    }
+}

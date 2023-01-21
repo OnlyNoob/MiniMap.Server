@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79E48743-282E-4BFC-B190-4CF4F5045DE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GarrysModLuaShared</RootNamespace>
+    <AssemblyName>gmsv_minimap_win32</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <DllExportNamespace>GarrysModLuaShared</DllExportNamespace>
+    <DllExportDDNSCecil>true</DllExportDDNSCecil>
+    <DllExportOrdinalsBase>1</DllExportOrdinalsBase>
+    <DllExportGenExpLib>false</DllExportGenExpLib>
+    <DllExportOurILAsm>false</DllExportOurILAsm>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CLIENT SERVER SOURCE_SDK</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>6</LangVersion>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Angle.cs" />
+    <Compile Include="Classes\bf_read.cs" />
+    <Compile Include="Classes\CEffectData.cs" />
+    <Compile Include="Classes\CLuaEmitter.cs" />
+    <Compile Include="Classes\CLuaLocomotion.cs" />
+    <Compile Include="Classes\CLuaParticle.cs" />
+    <Compile Include="Classes\CMoveData.cs" />
+    <Compile Include="Classes\CNavArea.cs" />
+    <Compile Include="Classes\CNavLadder.cs" />
+    <Compile Include="Classes\ConVar.cs" />
+    <Compile Include="Classes\CRecipientFilter.cs" />
+    <Compile Include="Classes\CSEnt.cs" />
+    <Compile Include="Classes\CSoundPatch.cs" />
+    <Compile Include="Classes\CTakeDamageInfo.cs" />
+    <Compile Include="Classes\CUserCmd.cs" />
+    <Compile Include="Classes\Entity.cs" />
+    <Compile Include="Classes\File.cs" />
+    <Compile Include="Classes\IGModAudioChannel.cs" />
+    <Compile Include="Classes\IMaterial.cs" />
+    <Compile Include="Classes\IMesh.cs" />
+    <Compile Include="Classes\IRestore.cs" />
+    <Compile Include="Classes\ISave.cs" />
+    <Compile Include="Classes\ITexture.cs" />
+    <Compile Include="Classes\IVideoWriter.cs" />
+    <Compile Include="Classes\MarkupObject.cs" />
+    <Compile Include="Classes\NextBot.cs" />
+    <Compile Include="Classes\NPC.cs" />
+    <Compile Include="Classes\Panel.cs" />
+    <Compile Include="Classes\PathFollower.cs" />
+    <Compile Include="Classes\PhysObj.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Schedule.cs" />
+    <Compile Include="Classes\Stack.cs" />
+    <Compile Include="Classes\Task.cs" />
+    <Compile Include="Classes\TOOL.cs" />
+    <Compile Include="Classes\Vector.cs" />
+    <Compile Include="Classes\Vehicle.cs" />
+    <Compile Include="Classes\VMatrix.cs" />
+    <Compile Include="Classes\Weapon.cs" />
+    <Compile Include="DllMain.cs" />
+    <Compile Include="achievements.cs" />
+    <Compile Include="bit.cs" />
+    <Compile Include="cookie.cs" />
+    <Compile Include="engine.cs" />
+    <Compile Include="Enums\ACT.cs" />
+    <Compile Include="Enums\BLOOD.cs" />
+    <Compile Include="Enums\BONE.cs" />
+    <Compile Include="Enums\BOX.cs" />
+    <Compile Include="Enums\BUTTON.cs" />
+    <Compile Include="Enums\CAP.cs" />
+    <Compile Include="Enums\CHAN.cs" />
+    <Compile Include="Enums\CLASS.cs" />
+    <Compile Include="Enums\COLLISION.cs" />
+    <Compile Include="Enums\COND.cs" />
+    <Compile Include="Enums\CONTENTS.cs" />
+    <Compile Include="Enums\CREATERENDERTARGETFLAGS.cs" />
+    <Compile Include="Enums\CT.cs" />
+    <Compile Include="Enums\D.cs" />
+    <Compile Include="Enums\DMG.cs" />
+    <Compile Include="Enums\DOCK.cs" />
+    <Compile Include="Enums\DOF.cs" />
+    <Compile Include="Enums\EF.cs" />
+    <Compile Include="Enums\EFL.cs" />
+    <Compile Include="Enums\FCVAR.cs" />
+    <Compile Include="Enums\FFT.cs" />
+    <Compile Include="Enums\FL.cs" />
+    <Compile Include="Enums\FORCE.cs" />
+    <Compile Include="Enums\FVPHYSICS.cs" />
+    <Compile Include="Enums\GESTURE.cs" />
+    <Compile Include="Enums\GMOD_CHANNEL.cs" />
+    <Compile Include="Enums\HITGROUP.cs" />
+    <Compile Include="Enums\HUD.cs" />
+    <Compile Include="Enums\HULL.cs" />
+    <Compile Include="Enums\IMAGE_FORMAT.cs" />
+    <Compile Include="Enums\IN.cs" />
+    <Compile Include="Enums\JOYSTICK.cs" />
+    <Compile Include="Enums\KEY.cs" />
+    <Compile Include="Enums\kRenderFx.cs" />
+    <Compile Include="Enums\LAST.cs" />
+    <Compile Include="Enums\MASK.cs" />
+    <Compile Include="Enums\MAT.cs" />
+    <Compile Include="Enums\MATERIAL.cs" />
+    <Compile Include="Enums\MATERIAL_CULLMODE.cs" />
+    <Compile Include="Enums\MATERIAL_FOG.cs" />
+    <Compile Include="Enums\MATERIAL_LIGHT.cs" />
+    <Compile Include="Enums\MATERIAL_RT_DEPTH.cs" />
+    <Compile Include="Enums\MOUSE.cs" />
+    <Compile Include="Enums\MOVECOLLIDE.cs" />
+    <Compile Include="Enums\MOVETYPE.cs" />
+    <Compile Include="Enums\NOTIFY.cs" />
+    <Compile Include="Enums\NPC.cs" />
+    <Compile Include="Enums\NUM.cs" />
+    <Compile Include="Enums\OBS_MODE.cs" />
+    <Compile Include="Enums\PATTACH.cs" />
+    <Compile Include="Enums\PLAYER.cs" />
+    <Compile Include="Enums\PLAYERANIMEVENT.cs" />
+    <Compile Include="Enums\RENDERGROUP.cs" />
+    <Compile Include="Enums\RENDERMODE.cs" />
+    <Compile Include="Enums\RT_SIZE.cs" />
+    <Compile Include="Enums\SCHED.cs" />
+    <Compile Include="Enums\SCREENFADE.cs" />
+    <Compile Include="Enums\SENSORBONE.cs" />
+    <Compile Include="Enums\SF.cs" />
+    <Compile Include="Enums\SIM.cs" />
+    <Compile Include="Enums\SND.cs" />
+    <Compile Include="Enums\SNDLVL.cs" />
+    <Compile Include="Enums\SOLID.cs" />
+    <Compile Include="Enums\STENCIL.cs" />
+    <Compile Include="Enums\STEPSOUNDTIME.cs" />
+    <Compile Include="Enums\STUDIO.cs" />
+    <Compile Include="Enums\SURF.cs" />
+    <Compile Include="Enums\TEAM.cs" />
+    <Compile Include="Enums\TEXFILTER.cs" />
+    <Compile Include="Enums\TEXT.cs" />
+    <Compile Include="Enums\TRACER.cs" />
+    <Compile Include="Enums\TRANSMIT.cs" />
+    <Compile Include="Enums\TYPE.cs" />
+    <Compile Include="Enums\USE.cs" />
+    <Compile Include="Enums\WEAPON.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="ExternDll.cs" />
+    <Compile Include="game.cs" />
+    <Compile Include="gameevent.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="gui.cs" />
+    <Compile Include="GuiCon.cs" />
+    <Compile Include="input.cs" />
+    <Compile Include="language.cs" />
+    <Compile Include="Lua.cs" />
+    <Compile Include="LuaConfig.cs" />
+    <Compile Include="luaL_Buffer.cs" />
+    <Compile Include="luaL_Reg.cs" />
+    <Compile Include="LuaObject.cs" />
+    <Compile Include="LuaState.cs" />
+    <Compile Include="LuaTable.cs" />
+    <Compile Include="lua_Alloc.cs" />
+    <Compile Include="lua_CFunction.cs" />
+    <Compile Include="lua_Debug.cs" />
+    <Compile Include="lua_Hook.cs" />
+    <Compile Include="lua_Reader.cs" />
+    <Compile Include="lua_Writer.cs" />
+    <Compile Include="math.cs" />
+    <Compile Include="menu.cs" />
+    <Compile Include="MiniMapServer.cs" />
+    <Compile Include="net.cs" />
+    <Compile Include="notification.cs" />
+    <Compile Include="os.cs" />
+    <Compile Include="physenv.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Random.cs" />
+    <Compile Include="resource.cs" />
+    <Compile Include="SourceEngine.cs" />
+    <Compile Include="Source\ICvar.cs" />
+    <Compile Include="Source\IVEngineClient.cs" />
+    <Compile Include="string.cs" />
+    <Compile Include="Structs\AmmoData.cs" />
+    <Compile Include="Structs\AngPos.cs" />
+    <Compile Include="Structs\AnimationData.cs" />
+    <Compile Include="Structs\AttachmentData.cs" />
+    <Compile Include="Structs\BodyGroupData.cs" />
+    <Compile Include="Structs\BoneManipulationData.cs" />
+    <Compile Include="Structs\Bullet.cs" />
+    <Compile Include="Structs\CamData.cs" />
+    <Compile Include="Structs\CollisionData.cs" />
+    <Compile Include="Structs\Color.cs" />
+    <Compile Include="Structs\ColorModifyData.cs" />
+    <Compile Include="Structs\CreationMenus.cs" />
+    <Compile Include="Structs\DateData.cs" />
+    <Compile Include="Structs\DebugInfo.cs" />
+    <Compile Include="Structs\DynamicLight.cs" />
+    <Compile Include="Structs\EmitSoundInfo.cs" />
+    <Compile Include="Structs\EntityCopyData.cs" />
+    <Compile Include="Structs\FontData.cs" />
+    <Compile Include="Structs\HTTPRequest.cs" />
+    <Compile Include="Structs\HullTrace.cs" />
+    <Compile Include="Structs\LocalLight.cs" />
+    <Compile Include="Structs\MatProxyData.cs" />
+    <Compile Include="Structs\MeshVertex.cs" />
+    <Compile Include="Structs\OperatingParams.cs" />
+    <Compile Include="Structs\PhysEnvPerformanceSettings.cs" />
+    <Compile Include="Structs\PhysicsObjectSave.cs" />
+    <Compile Include="Structs\PhysProperties.cs" />
+    <Compile Include="Structs\PolygonVertex.cs" />
+    <Compile Include="Structs\RenderCamData.cs" />
+    <Compile Include="Structs\RenderCaptureData.cs" />
+    <Compile Include="Structs\ServerQueryData.cs" />
+    <Compile Include="Structs\SoundData.cs" />
+    <Compile Include="Structs\SunInfo.cs" />
+    <Compile Include="Structs\TeamData.cs" />
+    <Compile Include="Structs\TextData.cs" />
+    <Compile Include="Structs\TextureData.cs" />
+    <Compile Include="Structs\ToScreenData.cs" />
+    <Compile Include="Structs\Trace.cs" />
+    <Compile Include="Structs\TraceResult.cs" />
+    <Compile Include="Structs\Undo.cs" />
+    <Compile Include="Structs\VehicleParams.cs" />
+    <Compile Include="Structs\VehicleParamsAxle.cs" />
+    <Compile Include="Structs\VehicleParamsBody.cs" />
+    <Compile Include="Structs\VehicleParamsEngine.cs" />
+    <Compile Include="Structs\VehicleParamsSteering.cs" />
+    <Compile Include="Structs\VideoData.cs" />
+    <Compile Include="Structs\ViewData.cs" />
+    <Compile Include="surface.cs" />
+    <Compile Include="system.cs" />
+    <Compile Include="TableIndex.cs" />
+    <Compile Include="team.cs" />
+    <Compile Include="timer.cs" />
+    <Compile Include="Turbostroi.cs" />
+    <Compile Include="Type.cs" />
+    <Compile Include="util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DllExport, Version=1.5.1.35977, Culture=neutral, PublicKeyToken=8337224c9ad9e356, processorArchitecture=MSIL">
+      <HintPath>..\packages\DllExport.1.5.1\lib\net20\DllExport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetty.Buffers, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Buffers.0.3.2\lib\net45\DotNetty.Buffers.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="DotNetty.Codecs, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Codecs.0.3.2\lib\net45\DotNetty.Codecs.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="DotNetty.Common, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Common.0.3.2\lib\net45\DotNetty.Common.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="DotNetty.Handlers, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Handlers.0.3.2\lib\net45\DotNetty.Handlers.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="DotNetty.Transport, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetty.Transport.0.3.2\lib\net45\DotNetty.Transport.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MoonSharp.Interpreter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=921e73ce94aa17f8, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoonSharp.2.0.0.0\lib\net40-client\MoonSharp.Interpreter.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="SharedMemory, Version=2.0.16.0, Culture=neutral, PublicKeyToken=71afd155bcebae3e, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharedMemory.2.0.16\lib\net40\SharedMemory.dll</HintPath>
+      <Private>True</Private>
+      <EmbedAssembly>true</EmbedAssembly>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\ASCII_table.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Dependencies\source_exports.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>COPY /Y "$(ProjectDir)Dependencies\source_exports.dll" "$(ProjectDir)$(OutDir)source_exports.dll"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="../packages/DllExport.1.5.1/tools/net.r_eg.DllExport.targets" Condition="Exists('../packages/DllExport.1.5.1/tools/net.r_eg.DllExport.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
